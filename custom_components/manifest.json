@@ -1,0 +1,15 @@
+{
+  "domain": "local_sofar_inverter",
+  "name": "LocalSofarSolar",
+  "version": "0.0.1",
+  "documentation": "https://github.com/MaGumagus/local_sofar_inverter",
+  "issue_tracker": "https://github.com/magumagus/local_sofar_inverter/issues",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@magumagus"],
+  "iot_class": "local_polling",
+  "supported_brands": {
+    "sofar": "Sofar"
+  },
+  "loggers": []
+}
