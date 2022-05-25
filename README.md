@@ -30,7 +30,7 @@ My 1st HA component so be polite :)
    [latest release](https://github.com/magumagus/local_sofar_inverter/releases/latest).
 2. Unpack the release and copy the `custom_components/local_sofar_inverter` directory
    into the `custom_components` directory of your Home Assistant installation.
-3. Configure the `local_sofar_inverter` platform in your 'configuration.yaml.
+3. Configure the `local_sofar_inverter` platform in your `configuration.yaml`.
 4. Restart Home Assistant.
 
 
@@ -44,7 +44,7 @@ My 1st HA component so be polite :)
 | `name`              | No       | Entity's prefix  **Default**: `local_sofar_inverter`                                                                                                                                                                                                                                                                                                                                            |
 | `username`          | No       | Username to log int  **Default**: `admin`                                                                                                                                                                                                                                                                                                                                            |
 | `password`          | No       | Password to log int  **Default**: `admin`                                                                                                                                                                                                                                                                                                                                            |
-| `scan_interval`     | No       | How often to read the inverte page **Default**: `mdi:delete-restore`                                                                                                                                                                                                                                                                                                                    |
+| `scan_interval`     | No       | How often to read the inverte page **Default**: `5` min                                                                                                                                                                                                                                                                                                                   |
 | `elevation`         | No       | When it is dark then inverter goes dark and its web goes offline, so it scans the page only when your sun is over your horizont **Default**: `5`                                                                                                                                                                                                                                                                                                                                            |
 
 #### **`configuration.yaml`**
@@ -65,6 +65,15 @@ sensor:
 | **name_**`total_e`         | Total produced energy                    |
 | **name_**`alarm`           | Errors returned by your inverter         |
 
+#### Problems?
+Try to turn on `debug` mode in your `configuration.yaml` and read/send your log file.
+
+```yaml
+logger:
+  default: warning
+  logs:
+    custom_components.local_sofar_inverter: debug
+```
 
 ## History
-	- 0.0.1  first working version, working with one phase Sofar inverter (model `SA3ES233` software version V310)
+0.0.1  first working version, working with one phase Sofar inverter (model `SA3ES233` software version V310)
