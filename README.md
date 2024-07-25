@@ -4,8 +4,6 @@
 - [Installation](#installation)
   - [Manual Installation](#manual-installation)
 - [Configuration](#configuration)
-   - [Parameters](#parameters)
-   - [configuration.yaml](#configuration.yaml)
    - [Entities returned](#entities-returned)
 - [History](#history)
 
@@ -13,6 +11,8 @@
 
 The `local_sofar_inverter` component is a Home Assistant integration that creates custom sensors for local monitoring your **Sofar inverter**.
 It reads data from your inverter page, so you dont need to connect to any 'cloud'
+When there is no sun, tthere is no PV energy so integration doesnt ask your inverter about it
+
 Returns:
  - current power
  - today's energy
@@ -30,31 +30,16 @@ My 1st HA component so be polite :)
    [latest release](https://github.com/magumagus/local_sofar_inverter/releases/latest).
 2. Unpack the release and copy the `custom_components/local_sofar_inverter` directory
    into the `custom_components` directory of your Home Assistant installation.
-3. Configure the `local_sofar_inverter` platform in your `configuration.yaml`.
-4. Restart Home Assistant.
+3. Restart Home Assistant.
+4. Configure in the normal way by adding integration via HA website 
 
 
 ## Configuration
 
-### Parameters
-
-| Parameter           | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
-| :------------------ | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `host`     		  | Yes      | IP of your inverter                                                                                                                                                                                                                                                                                                                                                                  |
-| `name`              | No       | Entity's prefix  **Default**: `local_sofar_inverter`                                                                                                                                                                                                                                                                                                                                            |
-| `username`          | No       | Username to log int  **Default**: `admin`                                                                                                                                                                                                                                                                                                                                            |
-| `password`          | No       | Password to log int  **Default**: `admin`                                                                                                                                                                                                                                                                                                                                            |
-| `scan_interval`     | No       | How often to read the inverte page **Default**: `5` min                                                                                                                                                                                                                                                                                                                   |
-| `elevation`         | No       | When it is dark then inverter goes dark and its web goes offline, so it scans the page only when your sun is over your horizont **Default**: `5`                                                                                                                                                                                                                                                                                                                                            |
-
-#### **`configuration.yaml`**
-
-Minimal
-```yaml
-sensor:
-  - platform: local_sofar_inverter
-    host: 192.168.67.111
-```
+via HA webpage
+- give ur inverter ID, username & password to login
+- set how often ask ur inverter
+- set minimal sun elevation when DONT ask inverter (he can be offline)
 
 #### Entities returned
 
@@ -76,4 +61,5 @@ logger:
 ```
 
 ## History
-0.0.1  first working version, working with one phase Sofar inverter (model `SA3ES233` software version V310)
+0.0.2  configuration via web, adding device  
+0.0.1  first working version, working with one phase Sofar inverter (model `SA3ES233` software version V310)  

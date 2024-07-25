@@ -1,0 +1,20 @@
+{
+  "config": {
+    "step": {
+      "confirm": {
+         "description": "This integration gets data from your inverter website. Do you want to continue?"
+          },
+      "user": {
+         "title": "Enter the connection parameters to the PV inverter.",
+          "data": {
+              "name": "Prefix of entities",
+              "host": "Name/IP of your inverter web page",
+              "username": "Username used to login to your inverter web page",
+              "password": "Password used to login to your inverter web page",
+              "scan_interval": "How often ask invereter (min 10s)",
+              "elevation" : "Elevation of the sun below dont ask inverter"
+            }
+        }
+    }
+  }
+}

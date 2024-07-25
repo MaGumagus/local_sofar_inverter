@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+         "title": "Podaj paramery połączenia z inwerterem.",
+          "data": {
+            "name": "Prefix encji",
+            "host": "Nazwa DNS/IP strony inwertera",
+            "username": "Nazwa użytkownika do logowania",
+            "password": "Hasło użytkownika do logowania",
+            "scan_interval": "Jak często odpytywać inwerter (min 10s)",
+            "elevation" : "Położenie słońca kiedy nie odpytywać inwertera"
+          }
+        }
+    }
+  }
+}

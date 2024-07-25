@@ -1,1 +1,0 @@
-"""Local Sofar Inverter integration"""
