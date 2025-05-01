@@ -35,7 +35,7 @@ INVERTER_SN_TAG = 'sn'
 WEB_PREFIX = "webdata_"
 INVERTER_DATA_VALUE_AT = 6
 INVERTER_DATA = {
-    'now_p':   ['power', 'PV power now', 'mdi:solar-power', 'power', 'W', 'mesurement', '0'],
+    'now_p':   ['power', 'PV power now', 'mdi:solar-power', 'power', 'W', 'measurement', '0'],
     'today_e': ['energy_today', 'PV energy today', 'mdi:lightning-bolt', 'energy', 'kWh', 'total', '0' ],
     'total_e': ['energy_total', 'PV energy total', 'mdi:lightning-bolt', 'energy', 'kWh', 'total_increasing', '' ],
     'alarm':   ['alarm', 'Inverter alarms', 'mdi:solar-panel', 'None', '', '', '' ],
